@@ -1,34 +1,25 @@
 import PropTypes from 'prop-types';
-import { useDeleteContactMutation } from '../../redux/contacts/contact-slice';
+import ContactItem from '../ContactItem';
+import { List } from './ContactList.styled';
 import Spinner from '../Spinner/Spinner';
-import { List, Text, Button } from './ContactList.styled';
 
 function ContactList({ contacts, isFetching }) {
-  const [deleteContact] = useDeleteContactMutation();
-
   return (
     <>
-      <Text>К-во контактов: {contacts && contacts.length}</Text>
-      <List>
-        {isFetching && <Spinner />}
-        {contacts &&
-          contacts.map(({ id, name, phone }) => {
-            return (
-              <li key={id}>
-                <Text>{name}</Text>
-                <Text>{phone}</Text>
-                <Button onClick={() => deleteContact(id)}>Delete</Button>
-              </li>
-            );
-          })}
-      </List>
+      {isFetching ? (
+        <Spinner />
+      ) : (
+        <List>
+          {contacts && contacts.map(contact => <ContactItem key={contact.id} contact={contact} />)}
+        </List>
+      )}
     </>
   );
 }
 
 ContactList.propTypes = {
   contacts: PropTypes.array,
-  isFetching: PropTypes.string,
+  isFetching: PropTypes.bool,
 };
 
 export default ContactList;

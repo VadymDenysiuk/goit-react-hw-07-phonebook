@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import { Form, Label, Input, Button } from './ContactForm.styled';
 import { useCreateContactMutation } from '../../redux/contacts/contact-slice';
-import Spinner from '../Spinner/Spinner';
 import toast from 'react-hot-toast';
 
 function ContactForm({ contacts }) {
@@ -48,10 +47,7 @@ function ContactForm({ contacts }) {
         />
       </Label>
 
-      <Button type="submit">
-        {isLoading && <Spinner size={4} />}
-        Save contact
-      </Button>
+      <Button type="submit">{isLoading ? 'Saving...' : 'Save contact'}</Button>
     </Form>
   );
 }

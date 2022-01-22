@@ -9,7 +9,7 @@ export const Container = styled.div`
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
-  border: 2px solid black;
+  border: 2px solid teal;
 `;
 
 export const Text = styled.p`

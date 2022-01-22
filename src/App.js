@@ -26,8 +26,9 @@ function App() {
       <h1>Phonebook</h1>
       <ContactForm contacts={data} />
       <h2>Contacts</h2>
-      <Filter value={filter} onChange={changeFilter} isFetching={isFetching} />
-      <ContactList contacts={visibleContacts} />
+      <Filter value={filter} onChange={changeFilter} />
+      <p>К-во контактов: {data && data.length}</p>
+      <ContactList contacts={visibleContacts} isFetching={isFetching} />
     </Container>
   );
 }
