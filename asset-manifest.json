@@ -1,10 +1,14 @@
 {
   "files": {
-    "main.js": "/goit-react-hw-07-phonebook/static/js/main.84c0da8e.js",
+    "main.css": "/goit-react-hw-07-phonebook/static/css/main.fd980cea.css",
+    "main.js": "/goit-react-hw-07-phonebook/static/js/main.2c761647.js",
+    "static/media/Orange-Pattern-Simple-Background-Image.jpg": "/goit-react-hw-07-phonebook/static/media/Orange-Pattern-Simple-Background-Image.d21737d1cd0dcbdc6440.jpg",
     "index.html": "/goit-react-hw-07-phonebook/index.html",
-    "main.84c0da8e.js.map": "/goit-react-hw-07-phonebook/static/js/main.84c0da8e.js.map"
+    "main.fd980cea.css.map": "/goit-react-hw-07-phonebook/static/css/main.fd980cea.css.map",
+    "main.2c761647.js.map": "/goit-react-hw-07-phonebook/static/js/main.2c761647.js.map"
   },
   "entrypoints": [
-    "static/js/main.84c0da8e.js"
+    "static/css/main.fd980cea.css",
+    "static/js/main.2c761647.js"
   ]
 }
