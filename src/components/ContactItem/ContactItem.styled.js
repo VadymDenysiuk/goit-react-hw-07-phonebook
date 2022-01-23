@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Text = styled.p`
-  color: #212121;
+  color: #566573;
 `;
 export const Button = styled.button`
   display: flex;
@@ -23,5 +23,14 @@ export const Button = styled.button`
   &:hover,
   &:focus {
     background-color: #188ce8;
+    transform: scale(1.1);
+  }
+`;
+
+export const Item = styled.li`
+  display: flex;
+  justify-content: space-between;
+  :not(:last-child) {
+    margin-bottom: 10px;
   }
 `;

@@ -4,7 +4,7 @@ import ContactForm from './components/ContactForm';
 import ContactList from './components/ContactList';
 import Filter from './components/Filter';
 import { Toaster } from 'react-hot-toast';
-import { Container } from './App.styled';
+import { Container, Text } from './App.styled';
 
 function App() {
   const [filter, setFilter] = useState('');
@@ -27,8 +27,12 @@ function App() {
       <ContactForm contacts={data} />
       <h2>Contacts</h2>
       <Filter value={filter} onChange={changeFilter} />
-      <p>К-во контактов: {data && data.length}</p>
-      <ContactList contacts={visibleContacts} isFetching={isFetching} />
+      <Text>Number of contacts: {data && data.length}</Text>
+      {data && data.length ? (
+        <ContactList contacts={visibleContacts} isFetching={isFetching} />
+      ) : (
+        <Text>Phonebook is empty. You can add contacts.</Text>
+      )}
     </Container>
   );
 }
